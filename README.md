@@ -6,19 +6,12 @@
 
 Поддерживается fallback на стандартный `pam_unix`.
 
----
-
 ## 🚀 Установка
-
-Установка одной командой:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/nudred/linux_custom_pam/refs/heads/main/install.sh -o install.sh
 bash install.sh
 ```
-
----
-
 ## ⚙️ Настройка PAM
 
 Добавить В НАЧАЛО файла:
@@ -40,8 +33,6 @@ auth required pam_unix.so
 * `pam_unix.so` должен остаться как fallback
 * Нельзя заменять весь PAM стек
 
----
-
 ## 🧪 Тестирование
 
 Установить pamtester (если нет):
@@ -62,8 +53,6 @@ pamtester login root authenticate
 pamtester sshd root authenticate
 ```
 
----
-
 ## 🔐 Хранение секретов
 
 PIN хранится как SHA256 хеш:
@@ -79,8 +68,6 @@ TOTP секрет:
 ```
 
 Если TOTP пустой → OTP отключается автоматически.
-
----
 
 ## ⚠️ ВАЖНО
 
