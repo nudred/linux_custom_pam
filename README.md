@@ -1,6 +1,6 @@
 # Linux Custom PAM
 
-## 1. DOCKER СБОРКА (x86 / ARM)
+## 1. DOCKER СБОРКА
 
 ```Dockerfile
 FROM ubuntu:22.04
