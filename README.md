@@ -54,20 +54,25 @@ sudo chmod 644 /lib/security/pam_otp_pin.so
 
 ## 3. ХРАНЕНИЕ СЕКРЕТОВ
 
-### PIN (SHA256)
+## создание папки
+
+```bash
+sudo mkdir -p /etc/pam_custom
+```
+
+## PIN (SHA256)
 
 ```bash
 echo -n "1234" | sha256sum | awk '{print $1}' | sudo tee /etc/pam_custom/pin
 ```
 
-### OTP SECRET
+## OTP SECRET
 
 ```bash
-sudo mkdir -p /etc/pam_custom
 echo "JBSWY3DPEHPK3PXP" | sudo tee /etc/pam_custom/otp.secret
 ```
 
-### генерация OTP
+## генерация OTP
 
 ```bash
 oathtool --totp -b JBSWY3DPEHPK3PXP
