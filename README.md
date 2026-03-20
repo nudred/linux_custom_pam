@@ -4,6 +4,3 @@
 
 ## Установка
 
-```bash
-curl https://github.com/nudred/linux_custom_pam/blob/main/install.sh | sh
-```
