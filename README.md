@@ -13,7 +13,8 @@
 Установка одной командой:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nudred/linux_custom_pam/refs/heads/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/nudred/linux_custom_pam/refs/heads/main/install.sh -o install.sh
+bash install.sh
 ```
 
 ---
